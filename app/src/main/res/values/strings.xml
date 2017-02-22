@@ -6,4 +6,25 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="hint_name">Name</string>
+    <string name="title_activity_data_binding">DataBindingActivity</string>
+    <string name="ok">OK</string>
+    <string name="no_camera_permission">No Camera Permission</string>
+    <string name="permission_camera_rationale">Camera Permission</string>
+    <string name="barcode_header">BarCode</string>
+    <string name="read_barcode">Read</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Flash</string>
+    <string name="low_storage_error">Low Storage</string>
+    <string name="barcode_success">Barcode Success</string>
+    <string name="barcode_failure">Barcode Failure</string>
+    <string name="barcode_error">Barcode Error</string>
+    <string name="ocr_header">OCR HEADER</string>
+    <string name="read_text">Read Text</string>
+    <string name="barcode_reader">Bar Code Reader</string>
+    <string name="title_activity_photo_viewer">title_activity_photo_viewer</string>
+    <string name="ocr_success">Ocr Success</string>
+    <string name="ocr_failure">Ocr Failed</string>
+    <string name="ocr_error">Ocr Error</string>
+    <string name="hello">Hello</string>
+    <string name="greet">Hello</string>
 </resources>
