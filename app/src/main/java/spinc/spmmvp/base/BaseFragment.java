@@ -1,8 +1,8 @@
 package spinc.spmmvp.base;
 
 import android.app.Dialog;
+import android.app.Fragment;
 import android.content.DialogInterface;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.AppCompatTextView;
 import android.text.TextUtils;
@@ -17,13 +17,16 @@ import spinc.spmmvp.R;
  * Created by webwerks on 15/2/17.
  */
 
-abstract public class BaseFragment extends Fragment{
+abstract public class BaseFragment extends Fragment {
     ProgressBar progressBar;
 
 
     Dialog openDialog;
     AlertDialog.Builder builder;
     AlertDialog dialog;
+
+    protected abstract void initView(View rootview);
+    protected abstract void setClicklistener();
 
     private void showAlert(String title,String message,String positiveText,final String negativeText) {
 

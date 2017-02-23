@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:id="@+id/llRootWelcome"
+    >
+
+    <LinearLayout
+        android:id="@+id/llButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="HomeActivity"
+        />
+
+            <ToggleButton
+                android:id="@+id/toggleFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonBarcodeReader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="barcodeReader"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonFaceTracker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Face Tracker"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonGoogleEye"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Google Eye"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonMultiTracker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MultiTracker"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonOcrReader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ocr Reader"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonPhotoDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Photo Demo"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonOcrReadStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ocr Read STart"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonOcrReadComplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ocr Read Complete"
+        />
+</LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayoutOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/containerWelcome"
+        android:visibility="gone"
+        android:background="@android:color/black"
+        android:alpha="0.5"
+        />
+
+    <LinearLayout
+        android:id="@+id/containerWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/llButtonContainer"
+        />
+
+</RelativeLayout>
