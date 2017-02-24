@@ -18,7 +18,7 @@
       android:padding="@dimen/spacing_large">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <android.support.v7.widget.AppCompatImageView
         android:id="@+id/image_people"
         android:layout_width="80dp"
         android:layout_height="80dp"

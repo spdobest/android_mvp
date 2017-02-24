@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
+import spinc.spmmvp.R;
 import spinc.spmmvp.databinding.PeopleDetailActivityBinding;
 import spinc.spmmvp.people_mvvm.model.People;
 import spinc.spmmvp.people_mvvm.viewmodel.PeopleDetailViewModel;
@@ -39,7 +40,7 @@ public class PeopleDetailActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     peopleDetailActivityBinding =
         DataBindingUtil.setContentView(this, R.layout.people_detail_activity);
-    setSupportActionBar(peopleDetailActivityBinding.toolbar);
+//    setSupportActionBar(peopleDetailActivityBinding.toolbar);
     displayHomeAsUpEnabled();
     getExtrasFromIntent();
   }

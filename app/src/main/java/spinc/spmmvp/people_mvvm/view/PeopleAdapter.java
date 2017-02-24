@@ -25,6 +25,7 @@ import android.view.ViewGroup;
 import java.util.Collections;
 import java.util.List;
 
+import spinc.spmmvp.R;
 import spinc.spmmvp.databinding.ItemPeopleBinding;
 import spinc.spmmvp.people_mvvm.model.People;
 import spinc.spmmvp.people_mvvm.viewmodel.ItemPeopleViewModel;
@@ -43,7 +44,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleAdap
         DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_people,
             parent, false);
     return new PeopleAdapterViewHolder(itemPeopleBinding);
-  }
+}
 
   @Override
   public void onBindViewHolder(PeopleAdapterViewHolder holder, int position) {

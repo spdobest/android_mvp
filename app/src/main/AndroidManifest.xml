@@ -17,7 +17,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -25,7 +24,8 @@
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="barcode,face,ocr" />
 
-        <!--<meta-data android:name="com.google.android.gms.version"
+        <!--
+        <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="face" />
@@ -42,7 +42,8 @@
 
         <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode,face" />
 
-        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="ocr" />-->
+        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="ocr" />
+        -->
 
         <activity android:name=".WelcomeActivity">
             <intent-filter>
@@ -52,96 +53,90 @@
             </intent-filter>
         </activity>
         <activity android:name=".fragment_mngmt.MainFragmentActivity" />
-
-
         <activity android:name=".HomeActivity" />
 
-        <!--=======================FOR BARCODE READER==================-->
+        <!-- =======================FOR BARCODE READER================== -->
         <activity
             android:name=".google_vision.barcodeReader.MainActivity"
-            android:label="@string/barcode_reader">
-
-        </activity>
-
+            android:label="@string/barcode_reader"></activity>
         <activity
             android:name=".google_vision.barcodeReader.BarcodeCaptureActivity"
             android:label="Read Barcode" />
 
-        <!--===============END OF BAR CODE READER=============-->
+        <!-- ===============END OF BAR CODE READER============= -->
 
-        <!--FOR FACE READER-->
 
+        <!-- FOR FACE READER -->
 
         <activity
             android:name=".google_vision.facetracker.FaceTrackerActivity"
             android:icon="@drawable/icon"
             android:label="Face Tracker"
             android:screenOrientation="fullSensor"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
 
-        <!--END OF FACE READER-->
+        <!-- END OF FACE READER -->
 
-        <!--FOR GOOGLY EYE-->
 
+        <!-- FOR GOOGLY EYE -->
 
         <activity
             android:name=".google_vision.googlyEyes.GooglyEyesActivity"
             android:icon="@drawable/icon"
             android:label="Googly Eyes"
             android:screenOrientation="fullSensor"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
 
-        <!--END OF FACE READER-->
+        <!-- END OF FACE READER -->
 
-        <!--FOR FACE TRACKER-->
 
+        <!-- FOR FACE TRACKER -->
 
         <activity
             android:name=".google_vision.multitracker.MultiTrackerActivity"
             android:icon="@drawable/icon"
             android:label="Multi-Tracker"
             android:screenOrientation="fullSensor"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <!--END OF FACE TRACKER-->
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <!-- END OF FACE TRACKER -->
 
 
-        <!--FOR OCR READER-->
-
+        <!-- FOR OCR READER -->
 
         <activity
             android:name=".google_vision.ocrReader.MainActivity"
-            android:label="Ocr Reader"/>
-
+            android:label="Ocr Reader" />
         <activity
             android:name=".google_vision.ocrReader.OcrCaptureActivity"
             android:label="Read Text" />
-        <!--END OF OCR READER-->
+        <!-- END OF OCR READER -->
 
 
-        <!--FOR OCR READER-->
+        <!-- FOR OCR READER -->
 
         <activity
             android:name=".google_vision.photo_demo.photo.PhotoViewerActivity"
             android:icon="@drawable/icon"
             android:label="@string/title_activity_photo_viewer"
             android:screenOrientation="fullSensor"
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
-        <!--END OF OCR READER-->
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <!-- END OF OCR READER -->
 
-        <!--OCR READ COMPLETE-->
+
+        <!-- OCR READ COMPLETE -->
         <activity
             android:name=".google_vision.ocrRead_Complete.OcrCaptureActivity"
-            android:label="Read Text"/>
+            android:label="Read Text" />
 
-        <!--OCR READ START-->
+        <!-- OCR READ START -->
         <activity
             android:name=".google_vision.ocrReader_start.OcrCaptureActivity"
-            android:label="Read Text"/>
-
-        <activity android:name=".espresso.TestActivity"/>
-
-        <activity android:name=".people_mvvm.view.PeopleActivity"/>
-        <activity android:name=".people_mvvm.view.PeopleDetailActivity"/>
-
+            android:label="Read Text" />
+        <activity android:name=".espresso.TestActivity" />
+        <activity android:name=".people_mvvm.view.PeopleActivity" android:theme="@style/AppTheme" />
+        <activity android:name=".people_mvvm.view.PeopleDetailActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".security.SecurityActivity" />
+        <activity android:name=".rxjava.RxActivity"/>
     </application>
+
 </manifest>

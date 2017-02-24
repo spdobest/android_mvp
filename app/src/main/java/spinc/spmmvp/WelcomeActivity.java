@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.ToggleButton;
 
 import spinc.spmmvp.fragment_mngmt.FragmentA;
@@ -21,6 +22,9 @@ import spinc.spmmvp.google_vision.googlyEyes.GooglyEyesActivity;
 import spinc.spmmvp.google_vision.multitracker.MultiTrackerActivity;
 import spinc.spmmvp.google_vision.ocrReader_start.OcrCaptureActivity;
 import spinc.spmmvp.google_vision.photo_demo.photo.PhotoViewerActivity;
+import spinc.spmmvp.people_mvvm.view.PeopleActivity;
+import spinc.spmmvp.rxjava.RxActivity;
+import spinc.spmmvp.security.SecurityActivity;
 
 /**
  * Created by webwerks on 16/2/17.
@@ -40,9 +44,12 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
     AppCompatButton buttonOcrReadComplete;
     FragmentUtilsMain fragmentUtilsMain;
 
-    LinearLayout llButtonContainer;
+    ScrollView llButtonContainer;
     FrameLayout frameLayoutOverlay;
     ToggleButton toggleFragment;
+
+    AppCompatButton buttonSecurity;
+    AppCompatButton buttonMvvm,buttonRxJava;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,10 +68,12 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
 
         buttonOcrReadStart = (AppCompatButton) findViewById(R.id.buttonOcrReadStart);
         buttonOcrReadComplete = (AppCompatButton) findViewById(R.id.buttonOcrReadComplete);
-        llButtonContainer  = (LinearLayout) findViewById(R.id.llButtonContainer);
+        llButtonContainer  = (ScrollView) findViewById(R.id.llButtonContainer);
         frameLayoutOverlay = (FrameLayout) findViewById(R.id.frameLayoutOverlay);
         toggleFragment = (ToggleButton) findViewById(R.id.toggleFragment);
-
+        buttonSecurity = (AppCompatButton) findViewById(R.id.buttonSecurity);
+        buttonMvvm = (AppCompatButton) findViewById(R.id.buttonMvvm);
+        buttonRxJava = (AppCompatButton) findViewById(R.id.buttonRxJava);
 
         buttonHome.setOnClickListener(this);
         buttonBarcodeReader.setOnClickListener(this);
@@ -77,6 +86,9 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         buttonOcrReadStart.setOnClickListener(this);
         buttonOcrReadComplete.setOnClickListener(this);
         frameLayoutOverlay.setOnClickListener(this);
+        buttonSecurity.setOnClickListener(this);
+        buttonMvvm.setOnClickListener(this);
+        buttonRxJava.setOnClickListener(this);
 
         fragmentUtilsMain.startFragment(FragmentTag.newInstance(),R.id.containerWelcome,true);
         toggleFragment.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -128,6 +140,15 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
                 frameLayoutOverlay.setVisibility(View.GONE);
                 fragmentUtilsMain.clearBackStack();
                 toggleFragment.setChecked(false);
+                break;
+            case R.id.buttonSecurity :
+                startActivity(new Intent(this, SecurityActivity.class));
+                break;
+            case R.id.buttonMvvm :
+                startActivity(new Intent(this, PeopleActivity.class));
+                break;
+            case R.id.buttonRxJava :
+                startActivity(new Intent(this, RxActivity.class));
                 break;
         }
     }

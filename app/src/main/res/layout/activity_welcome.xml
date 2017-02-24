@@ -7,8 +7,12 @@
     android:id="@+id/llRootWelcome"
     >
 
-    <LinearLayout
+    <ScrollView
         android:id="@+id/llButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -91,8 +95,30 @@
         android:layout_height="wrap_content"
         android:text="Ocr Read Complete"
         />
-</LinearLayout>
 
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonSecurity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Security"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonMvvm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mvvm"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonRxJava"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rx Java"
+            />
+
+</LinearLayout>
+    </ScrollView>
     <FrameLayout
         android:id="@+id/frameLayoutOverlay"
         android:layout_width="match_parent"

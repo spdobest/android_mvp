@@ -44,7 +44,7 @@ public class PeopleActivity extends AppCompatActivity implements Observer {
     super.onCreate(savedInstanceState);
 
     initDataBinding();
-    setSupportActionBar(peopleActivityBinding.toolbar);
+//    setSupportActionBar(peopleActivityBinding.toolbar);
     setupListPeopleView(peopleActivityBinding.listPeople);
     setupObserver(peopleViewModel);
   }
