@@ -41,7 +41,6 @@ public class PeopleViewModel extends Observable {
   private Subscription subscription;
 
   public PeopleViewModel(@NonNull Context context) {
-
     this.context = context;
     this.peopleList = new ArrayList<>();
     peopleProgress = new ObservableInt(View.GONE);
