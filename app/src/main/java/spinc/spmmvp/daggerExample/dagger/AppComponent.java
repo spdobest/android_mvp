@@ -16,5 +16,4 @@ import spinc.spmmvp.daggerExample.ProductListener;
 public interface AppComponent {
     void inject(ProductListener presenter);
     void inject(DaggerActivity activity);
-
 }

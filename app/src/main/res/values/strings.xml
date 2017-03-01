@@ -37,6 +37,7 @@
     <string name="error_loading_people">There seems to have been some error.</string>
     <string name="default_loading_people">Press the button to load people!</string>
     <string name="hello_world">Hello WOrld</string>
+    <string name="click_me">CLick Me</string>
 
     <plurals name="numberOfComments">123</plurals>
 </resources>

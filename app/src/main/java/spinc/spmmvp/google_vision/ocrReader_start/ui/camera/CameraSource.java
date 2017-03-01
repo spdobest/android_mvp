@@ -254,7 +254,7 @@ public class CameraSource {
     //==============================================================================================
 
     /**
-     * Callback interface used to signal the moment of actual image capture.
+     * Callback interfaceImpl used to signal the moment of actual image capture.
      */
     public interface ShutterCallback {
         /**
@@ -267,7 +267,7 @@ public class CameraSource {
     }
 
     /**
-     * Callback interface used to supply image data from a photo capture.
+     * Callback interfaceImpl used to supply image data from a photo capture.
      */
     public interface PictureCallback {
         /**
@@ -278,7 +278,7 @@ public class CameraSource {
     }
 
     /**
-     * Callback interface used to notify on completion of camera auto focus.
+     * Callback interfaceImpl used to notify on completion of camera auto focus.
      */
     public interface AutoFocusCallback {
         /**
@@ -296,7 +296,7 @@ public class CameraSource {
     }
 
     /**
-     * Callback interface used to notify on auto focus start and stop.
+     * Callback interfaceImpl used to notify on auto focus start and stop.
      * <p/>
      * <p>This is only supported in continuous autofocus modes -- {@link
      * Camera.Parameters#FOCUS_MODE_CONTINUOUS_VIDEO} and {@link
@@ -416,7 +416,7 @@ public class CameraSource {
                 mCamera.setPreviewCallbackWithBuffer(null);
                 try {
                     // We want to be compatible back to Gingerbread, but SurfaceTexture
-                    // wasn't introduced until Honeycomb.  Since the interface cannot use a
+                    // wasn't introduced until Honeycomb.  Since the interfaceImpl cannot use a
                     // SurfaceTexture, if the developer wants to display a preview we must use a
                     // SurfaceHolder.  If the developer doesn't want to display a preview we use a
                     // SurfaceTexture if we are running at least Honeycomb.

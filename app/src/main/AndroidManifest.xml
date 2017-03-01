@@ -45,7 +45,7 @@
         <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="ocr" />
         -->
 
-        <activity android:name=".WelcomeActivity">
+        <activity android:name=".androidReactiveUI.ReactiveUiActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
