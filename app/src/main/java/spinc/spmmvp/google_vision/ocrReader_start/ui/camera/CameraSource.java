@@ -1028,7 +1028,7 @@ public class CameraSource {
      * Creates one buffer for the camera preview callback.  The size of the buffer is based off of
      * the camera preview size and the format of the camera image.
      *
-     * @return a new preview buffer of the appropriate size for the current camera settings
+     * @return a newRx preview buffer of the appropriate size for the current camera settings
      */
     private byte[] createPreviewBuffer(Size previewSize) {
         int bitsPerPixel = ImageFormat.getBitsPerPixel(ImageFormat.NV21);
@@ -1058,7 +1058,7 @@ public class CameraSource {
     //==============================================================================================
 
     /**
-     * Called when the camera has a new preview frame.
+     * Called when the camera has a newRx preview frame.
      */
     private class CameraPreviewCallback implements Camera.PreviewCallback {
         @Override
@@ -1072,7 +1072,7 @@ public class CameraSource {
      * available from the camera.  This is designed to run detection on frames as fast as possible
      * (i.e., without unnecessary context switching or waiting on the next frame).
      * <p/>
-     * While detection is running on a frame, new frames may be received from the camera.  As these
+     * While detection is running on a frame, newRx frames may be received from the camera.  As these
      * frames come in, the most recent frame is held onto as pending.  As soon as detection and its
      * associated processing are done for the previous frame, detection on the mostly recently
      * received frame will immediately start on the same thread.
@@ -1085,7 +1085,7 @@ public class CameraSource {
         private final Object mLock = new Object();
         private boolean mActive = true;
 
-        // These pending variables hold the state associated with the new frame awaiting processing.
+        // These pending variables hold the state associated with the newRx frame awaiting processing.
         private long mPendingTimeMillis;
         private int mPendingFrameId = 0;
         private ByteBuffer mPendingFrameData;
@@ -1152,7 +1152,7 @@ public class CameraSource {
          * run detection on that frame.  It immediately loops back for the next frame without
          * pausing.
          * <p/>
-         * If detection takes longer than the time in between new frames from the camera, this will
+         * If detection takes longer than the time in between newRx frames from the camera, this will
          * mean that this loop will run without ever waiting on a frame, avoiding any context
          * switching or frame acquisition time latency.
          * <p/>

@@ -13,15 +13,18 @@ import spinc.spmmvp.daggerExample.ShoppingCart;
 @Module
 public class ShoppingCartModule {
 
+    public static String name = "sibaprasad";
+
     @Provides
     @Singleton
-    SharedPreferences providesSharedPreference(Context context){
+    SharedPreferences providesSharedPreference(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context);
     }
 
-    @Provides @Singleton
-    ShoppingCart providesShoppingCart(SharedPreferences preferences){
-        return  new ShoppingCart(preferences);
+    @Provides
+    @Singleton
+    ShoppingCart providesShoppingCart(SharedPreferences preferences) {
+        return new ShoppingCart(preferences);
     }
 
 

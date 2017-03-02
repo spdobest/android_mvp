@@ -5,11 +5,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 
 import javax.inject.Inject;
 
 import spinc.spmmvp.R;
+import spinc.spmmvp.daggerExample.dagger.ShoppingCartModule;
 import spinc.spmmvp.daggerExample.interfaceImpl.HelloService;
 
 /**
@@ -34,14 +36,19 @@ public class DaggerActivity extends AppCompatActivity {
     @Inject
     HelloService helloService;
 
+    @Inject
+    ShoppingCartModule shoppingCartModule;
 
+    private static final String TAG = "DaggerActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dagger);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
+
+        Log.i(TAG, "onCreate: "+shoppingCartModule.name);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

@@ -391,7 +391,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 
         /**
          * Responds to the beginning of a scaling gesture. Reported by
-         * new pointers going down.
+         * newRx pointers going down.
          *
          * @param detector The detector reporting the event - use this to
          *                 retrieve extended info about event state.

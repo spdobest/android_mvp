@@ -265,7 +265,7 @@ public final class FaceTrackerActivity extends AppCompatActivity {
     //==============================================================================================
 
     /**
-     * Factory for creating a face tracker to be associated with a new face.  The multiprocessor
+     * Factory for creating a face tracker to be associated with a newRx face.  The multiprocessor
      * uses this factory to create face trackers as needed -- one for each individual.
      */
     private class GraphicFaceTrackerFactory implements MultiProcessor.Factory<Face> {

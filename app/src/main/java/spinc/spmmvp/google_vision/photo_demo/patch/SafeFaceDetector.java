@@ -37,7 +37,7 @@ import java.util.Arrays;
  *
  * This detector should wrap the underlying FaceDetector instance, like this:
  *
- * Detector<Face> safeDetector = new SafeFaceDetector(faceDetector);
+ * Detector<Face> safeDetector = newRx SafeFaceDetector(faceDetector);
  *
  * Replace all remaining occurrences of faceDetector with safeDetector.
  */
@@ -107,7 +107,7 @@ public class SafeFaceDetector extends Detector<Face> {
     }
 
     /**
-     * Creates a new frame based on the original frame, with additional width on the right to
+     * Creates a newRx frame based on the original frame, with additional width on the right to
      * increase the size to avoid the bug in the underlying face detector.
      */
     private Frame padFrameRight(Frame originalFrame, int newWidth) {
@@ -143,7 +143,7 @@ public class SafeFaceDetector extends Detector<Face> {
     }
 
     /**
-     * Creates a new frame based on the original frame, with additional height on the bottom to
+     * Creates a newRx frame based on the original frame, with additional height on the bottom to
      * increase the size to avoid the bug in the underlying face detector.
      */
     private Frame padFrameBottom(Frame originalFrame, int newHeight) {

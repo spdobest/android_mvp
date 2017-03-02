@@ -45,7 +45,7 @@
         <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="ocr" />
         -->
 
-        <activity android:name=".androidReactiveUI.ReactiveUiActivity">
+        <activity android:name=".rxAndroidExample.RxAndroidActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -58,7 +58,7 @@
         <!-- =======================FOR BARCODE READER================== -->
         <activity
             android:name=".google_vision.barcodeReader.MainActivity"
-            android:label="@string/barcode_reader"></activity>
+            android:label="@string/barcode_reader" />
         <activity
             android:name=".google_vision.barcodeReader.BarcodeCaptureActivity"
             android:label="Read Barcode" />
@@ -133,10 +133,14 @@
             android:name=".google_vision.ocrReader_start.OcrCaptureActivity"
             android:label="Read Text" />
         <activity android:name=".espresso.TestActivity" />
-        <activity android:name=".people_mvvm.view.PeopleActivity" android:theme="@style/AppTheme" />
-        <activity android:name=".people_mvvm.view.PeopleDetailActivity" android:theme="@style/AppTheme"/>
+        <!--<activity
+            android:name=".people_mvvm.view.PeopleActivity"
+            android:theme="@style/AppTheme" />-->
+        <activity
+            android:name=".people_mvvm.view.PeopleDetailActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".security.SecurityActivity" />
-        <activity android:name=".rxjava.RxActivity"/>
+        <activity android:name=".rxjava.RxActivity" />
     </application>
 
 </manifest>

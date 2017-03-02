@@ -26,7 +26,7 @@ import com.google.android.gms.vision.face.Face;
 import spinc.spmmvp.google_vision.multitracker.ui.camera.GraphicOverlay;
 
 /**
- * Factory for creating a tracker and associated graphic to be associated with a new face.  The
+ * Factory for creating a tracker and associated graphic to be associated with a newRx face.  The
  * multi-processor uses this factory to create face trackers as needed -- one for each individual.
  */
 class FaceTrackerFactory implements MultiProcessor.Factory<Face> {

@@ -17,7 +17,7 @@ public class RxActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx);
 
-        Observer<String> myObserver = new Observer<String>() {
+        Observer<Object> myObserver = new Observer<Object>() {
             @Override
             public void onCompleted() {
                 // Called when the observable has no more data to emit
@@ -27,9 +27,9 @@ public class RxActivity extends AppCompatActivity {
                 // Called when the observable encounters an error
             }
             @Override
-            public void onNext(String s) {
+            public void onNext(Object s) {
                 // Called each time the observable emits data
-                Log.d("MY OBSERVER", s);
+                Log.d("MY OBSERVER", s.toString());
             }
         };
 

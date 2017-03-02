@@ -50,7 +50,7 @@ public class PhotoViewerActivity extends Activity {
         InputStream stream = getResources().openRawResource(R.raw.face);
         Bitmap bitmap = BitmapFactory.decodeStream(stream);
 
-        // A new face detector is created for detecting the face and its landmarks.
+        // A newRx face detector is created for detecting the face and its landmarks.
         //
         // Setting "tracking enabled" to false is recommended for detection with unrelated
         // individual images (as opposed to video or a series of consecutively captured still
